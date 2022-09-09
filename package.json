@@ -7,14 +7,12 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "svgSprive": "gulp svgSprive",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "aos": "^2.3.4",
     "browser-sync": "latest",
     "del": "latest",
     "gulp": "latest",
@@ -31,7 +29,6 @@
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
-    "gulp-svg-sprite": "latest",
     "gulp-ttf2woff2": "latest",
     "gulp-util": "latest",
     "gulp-version-number": "latest",
@@ -44,6 +41,8 @@
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",
-    "webpack-stream": "latest"
+    "webpack-stream": "latest",
+    "node-sass": "latest",
+    "jquery": "latest"
   }
 }
