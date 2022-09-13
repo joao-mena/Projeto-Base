@@ -3,7 +3,7 @@
   width: 100%;
   display: block;
   margin: 0 auto;
-  padding: 0 space(3);
+  padding: 0 1rem;
 
   @include breakpoint-up($sm) {
     padding: 0;

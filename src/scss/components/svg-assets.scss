@@ -1,0 +1,33 @@
+$svgs: ("sun", "moon");
+
+[class*="svg-"] {
+  display: inline-block;
+  width: rem(30px);
+  height: rem(30px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &.left {
+    transform: rotate(180deg);
+  }
+
+  &.right {
+    transform: rotate(-180deg);
+  }
+
+  &.top {
+    transform: rotate(90deg);
+  }
+
+  &.bottom {
+    transform: rotate(-90deg);
+  }
+}
+
+@each $key, $value in $svgs {
+  .svg-#{$key} {
+    background-image: url("/img/svg/" + $key + ".svg");
+    background-size: contain;
+  }
+}

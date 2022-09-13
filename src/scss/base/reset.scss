@@ -1,14 +1,23 @@
 *,
 *:after,
 *:before {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body,
 html {
-  height: 100%;
+  font-size: 100%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 input:focus,
