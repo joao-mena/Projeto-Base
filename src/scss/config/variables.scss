@@ -3,44 +3,18 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   /*
-        Green: hsl(163, 58%, 61%)
-        Red: hsl(343, 100%, 34%)
-        Pink: hsl(77, 41%, 27%)
-        graay: hsl(0, 0%, 80%)
-    */
+    Green: hsl(163, 58%, 61%)
+    Red: hsl(343, 100%, 34%)
+    Pink: hsl(77, 41%, 27%)
+    graay: hsl(0, 0%, 80%)
+  */
 
-  --hue: 163;
-  --sat: 58%;
-  --lig: 61%;
-
-  --first-color: hsl(var(--hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
-  --title-color: hsl(var(--hue), 12%, 15%);
-  --text-color: hsl(var(--hue), 12%, 45%);
-  --text-color-light: hsl(var(--hue), 8%, 75%);
-  --text-color-lighten: hsl(var(--hue), 8%, 92%);
-  --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #fff;
   --swiper-color: #000;
 
   /*========== Colors Header ==========*/
-  --color-white-100: hsl(206, 0%, 100%);
-  --color-white-200: hsl(206, 0%, 90%);
-  --color-white-300: hsl(206, 0%, 80%);
-  --color-white-400: hsl(206, 0%, 65%);
-  --color-white-500: hsl(206, 0%, 50%);
-
-  --color-black-100: hsl(217, 30%, 18%);
-  --color-black-200: hsl(217, 27%, 15%);
-  --color-black-300: hsl(217, 27%, 12%);
-  --color-black-400: hsl(217, 52%, 9%);
-
-  --color-blue-100: hsl(215, 97%, 87%);
-  --color-blue-200: hsl(215, 96%, 78%);
-  --color-blue-300: hsl(215, 94%, 68%);
-  --color-blue-400: hsl(215, 91%, 60%);
-  --color-blue-500: hsl(215, 83%, 53%);
-  --color-blue-600: hsl(215, 76%, 48%);
+  --color-white: hsl(206, 0%, 100%);
+  --color-black: #00000;
+  --color-blue: hsl(215, 76%, 48%);
 
   /*========== Shadows ==========*/
   --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -64,10 +38,11 @@
   }
 
   /*========== Sizes ==========*/
-  --header-size-mob: 3.125rem; //50px
-  --header-size-desk: 4.375rem; //70px
+  --header-size: 3.125rem; //50px
 
+  // Responsive
   @media screen and (min-width: 62rem) {
+    --header-size: 4.375rem; //70px
   }
 }
 

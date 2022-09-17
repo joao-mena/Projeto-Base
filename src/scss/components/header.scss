@@ -8,13 +8,9 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: var(--color-white-100);
+  background-color: var(--color-white);
   box-shadow: var(--shadow-medium);
-  height: var(--header-size-mob);
-
-  @include breakpoint-up($lg) {
-    height: var(--header-size-desk);
-  }
+  height: var(--header-size);
 
   > .container {
     display: flex;
@@ -38,7 +34,7 @@
     margin-right: auto;
     letter-spacing: -1px;
     text-transform: uppercase;
-    color: var(--color-blue-500);
+    color: var(--color-blue);
   }
 
   .menu {
@@ -50,8 +46,8 @@
     padding: 2rem 1.5rem;
     z-index: 10;
     overflow: hidden;
-    color: var(--color-black-400);
-    background-color: var(--color-white-100);
+    color: var(--color-black);
+    background-color: var(--color-white);
     box-shadow: var(--shadow-medium);
     transition: all 0.4s ease-in-out;
 
@@ -132,15 +128,17 @@
       outline: none;
       opacity: 1;
       transform: rotate(0deg);
-      background-color: var(--color-black-400);
+      background-color: var(--color-black);
       transition: 0.25s ease-in-out;
 
       &:nth-child(1) {
         top: 0px;
       }
+
       &:nth-child(2) {
         top: 0.5rem;
       }
+
       &:nth-child(3) {
         top: 1rem;
       }
