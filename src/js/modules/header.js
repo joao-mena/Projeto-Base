@@ -1,47 +1,66 @@
 export function header() {
-  const navbarMenu = document.getElementById("menu");
+  const navbarMenu = document.getElementById("navbar");
   const burgerMenu = document.getElementById("burger");
   const overlayMenu = document.querySelector(".overlay");
-  const switcher = document.querySelector(".switch");
 
-  // Toggle of Navbar Menu on Click
-  if (burgerMenu && overlayMenu) {
-    burgerMenu.addEventListener("click", () => {
-      navbarMenu.classList.add("is-active");
-      overlayMenu.classList.add("is-active");
-    });
+  // Show and Hide Navbar Function
+  const toggleMenu = () => {
+    navbarMenu.classList.toggle("active");
+    overlayMenu.classList.toggle("active");
 
-    overlayMenu.addEventListener("click", () => {
-      navbarMenu.classList.remove("is-active");
-      overlayMenu.classList.remove("is-active");
-    });
-  }
+    if (window.innerWidth < 992) {
+      burgerMenu.classList.toggle("active");
+    }
+  };
 
-  // Close Navbar Menu on Click Links
-  document.querySelectorAll(".menu-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      burgerMenu.classList.remove("is-active");
-      navbarMenu.classList.remove("is-active");
-    });
-  });
+  // Collapsible Mobile Submenu Function
+  const collapseSubMenu = () => {
+    navbarMenu
+      .querySelector(".menu-dropdown.active .submenu")
+      .removeAttribute("style");
+    navbarMenu
+      .querySelector(".menu-dropdown.active")
+      .classList.remove("active");
+  };
 
-  // Dark and Light Mode on Switch Click
-  document.addEventListener("DOMContentLoaded", () => {
-    const darkSwitch = document.getElementById("switch");
+  // Toggle Mobile Submenu Function
+  const toggleSubMenu = (e) => {
+    if (e.target.hasAttribute("data-toggle") && window.innerWidth <= 992) {
+      e.preventDefault();
+      const menuDropdown = e.target.parentElement;
 
-    darkSwitch.addEventListener("click", () => {
-      document.body.classList.toggle("darkmode");
-      switcher.classList.toggle("darkmode");
-    });
-  });
+      // If Dropdown is Expanded, then Collapse It
+      if (menuDropdown.classList.contains("active")) {
+        collapseSubMenu();
+      } else {
+        // Collapse Existing Expanded Dropdown
+        if (navbarMenu.querySelector(".menu-dropdown.active")) {
+          collapseSubMenu();
+        }
 
-  // Fixed Navbar Menu on Window Resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 992) {
-      if (navbarMenu.classList.contains("is-active")) {
-        navbarMenu.classList.remove("is-active");
-        overlayMenu.classList.remove("is-active");
+        // Expanded the New Dropdown
+        menuDropdown.classList.add("active");
+        const subMenu = menuDropdown.querySelector(".submenu");
+        subMenu.style.maxHeight = subMenu.scrollHeight + "px";
       }
     }
-  });
+  };
+
+  // Fixed Resize Window Function
+  const resizeWindow = () => {
+    if (window.innerWidth > 992) {
+      if (navbarMenu.classList.contains("active")) {
+        toggleMenu();
+      }
+      if (navbarMenu.querySelector(".menu-dropdown.active")) {
+        collapseSubMenu();
+      }
+    }
+  };
+
+  // Initialize Event Listeners
+  burgerMenu.addEventListener("click", toggleMenu);
+  overlayMenu.addEventListener("click", toggleMenu);
+  navbarMenu.addEventListener("click", toggleSubMenu);
+  window.addEventListener("resize", resizeWindow);
 }

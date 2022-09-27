@@ -13,7 +13,7 @@
 
   /*========== Colors Header ==========*/
   --color-white: hsl(206, 0%, 100%);
-  --color-black: #00000;
+  --color-black: rgba(0, 0, 0, 1);
   --color-blue: hsl(215, 76%, 48%);
 
   /*========== Shadows ==========*/
@@ -28,6 +28,8 @@
   --h2-font-size: 1.125rem; //20px
   --normal-font-size: 0.875rem; //14px
   --small-font-size: 0.688rem; //11px
+
+  --ease-in-out: all 0.3s ease-in-out;
 
   // Responsive
   @media screen and (min-width: 62rem) {
