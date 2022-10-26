@@ -6,7 +6,6 @@
 @import "base/normalize";
 @import "base/functions";
 @import "base/mixins";
-@import "base/utils";
 @import "base/fonts";
 @import "base/svg-assets";
 
@@ -17,6 +16,7 @@
 
 // layout
 @import "layout/layout";
+@import "layout/theme";
 
 // vendors
 @import "vendor/swiper-bundle";

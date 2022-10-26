@@ -231,7 +231,7 @@
     transform: scale(5);
   }
 
-  @include breakpoint-down($sm) {
+  @include breakpoint-down(var(--sm)) {
     width: 15px;
     height: 15px;
   }
@@ -257,7 +257,7 @@
 
   transition: color 0.3s;
 
-  @include breakpoint-down($sm) {
+  @include breakpoint-down(var(--sm)) {
     font-size: 18px;
   }
 }
@@ -279,7 +279,7 @@
 .swiper-rtl .swiper-button-prev {
   right: 20px;
 
-  @include breakpoint-down($xxl) {
+  @include breakpoint-down(var(--xxl)) {
     right: 0;
   }
 }
