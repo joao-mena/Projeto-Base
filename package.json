@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "svgSprive": "gulp svgSprive",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build"
   },
@@ -29,8 +28,8 @@
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
-    "gulp-svg-sprite": "latest",
     "gulp-util": "latest",
+    "gulp-version-number": "latest",
     "gulp-webp": "latest",
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
