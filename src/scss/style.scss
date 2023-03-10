@@ -1,24 +1,17 @@
-@import 'components/vars';
-@import 'components/mixins';
-@import 'components/classes';
-@import 'components/normalize';
+/* IMPORT CADU CONFIGS */
+@import "config/variables";
+// @import "config/functions";
+@import "config/mixins";
 
-// reset
-@import 'components/reset';
-@import 'components/default';
+/* IMPORT BASE */
+@import "base/normalize";
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+@import "base/colors";
+@import "base/spaces";
+@import "base/container";
 
-// vendors
-@import 'vendor/swiper-bundle';
-@import 'vendor/aos';
+/* IMPORT CADU COMPONENTS */
 
-// blocks
-@import 'blocks/header';
-@import 'blocks/first';
-@import 'blocks/companies';
-@import 'blocks/auctions';
-@import 'blocks/how';
-@import 'blocks/popular';
-@import 'blocks/categories';
-@import 'blocks/creators';
-@import 'blocks/subscribe';
-@import 'blocks/footer';
+/* IMPORT CADU LAYOUT */

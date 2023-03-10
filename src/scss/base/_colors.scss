@@ -1,0 +1,22 @@
+@mixin colors($prefix, $attr) {
+  @for $i from 1 through length($colors) {
+    $color: nth($colors, $i);
+
+    #{$prefix}-#{$i} {
+      #{$attr}: color($i);
+    }
+  }
+}
+
+@mixin gradient($prefix, $attr) {
+  @for $i from 1 through length($colors) {
+    $color: nth($colors, $i);
+
+    #{$prefix}-#{$i} {
+      #{$attr}: linear-gradient(to bottom, color($i), color($i, 0));
+    }
+  }
+}
+
+@include colors(".c", color);
+@include colors(".bg", background);

@@ -1,0 +1,36 @@
+.container {
+  display: block;
+  width: 100%;
+  max-width: var(--max-container);
+  margin: 0 auto;
+  padding: 0 space(4);
+  background-color: transparent;
+
+  &--no-padding-xs {
+    @include breakpoint-down($lg) {
+      padding: 0;
+    }
+  }
+
+  &--no-padding-md {
+    @include breakpoint-up($lg) {
+      padding: 0;
+    }
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &--lg {
+    max-width: var(--max-container-lg);
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  &--block {
+    margin: 0 auto space(7);
+  }
+}

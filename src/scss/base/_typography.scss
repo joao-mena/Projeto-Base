@@ -1,0 +1,17 @@
+body {
+  font-family: var(--body-font);
+  position: relative;
+  line-height: 1.2;
+  font-size: rem(14px);
+
+  @include breakpoint-up($md) {
+    font-size: rem(16px);
+  }
+
+  .mainWrapper {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+}

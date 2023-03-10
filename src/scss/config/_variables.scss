@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --c-1: hsla(195, 100%, 44%, 1); // Receitas Blue
+  --c-2: hsla(195, 100%, 34%, 1); // Receitas Secondary Dark Blue
+  --c-3: hsla(199, 40%, 59%, 1); // Receitas Secondary Mid Blue
+  --c-4: hsla(203, 32%, 87%, 1); // Receitas Secondary Light Blue
+  --c-5: hsla(202, 45%, 98%, 1); // Receitas Secondary Light Focus
+  --c-6: hsla(180, 7%, 10%, 1); // Receitas Darkest Grey
+  --c-7: hsla(180, 7%, 32%, 1); // Receitas Dark Grey
+  --c-8: hsla(180, 2%, 54%, 1); // Receitas Mid Grey
+  --c-9: hsla(180, 1%, 85%, 1); // Receitas Light Grey
+  --c-10: hsla(0, 0%, 100%, 1); // Receitas Neutral White
+  --c-11: hsla(123, 43%, 39%, 1); // Green check
+  --c-12: hsla(0, 65%, 51%, 1); // Red error
+  --c-13: hsla(351, 100%, 99%, 1); // Red bg light
+
+  /*========== Filters Colors ==========*/
+  --filter-c-1: invert(55%) sepia(94%) saturate(3116%) hue-rotate(162deg) brightness(95%) contrast(103%);
+  --filter-c-2: invert(43%) sepia(37%) saturate(7062%) hue-rotate(170deg) brightness(86%) contrast(101%);
+  --filter-c-3: invert(80%) sepia(78%) saturate(2860%) hue-rotate(174deg) brightness(81%) contrast(88%);
+  --filter-c-4: invert(95%) sepia(6%) saturate(482%) hue-rotate(171deg) brightness(90%) contrast(103%);
+  --filter-c-5: invert(100%) sepia(6%) saturate(4399%) hue-rotate(166deg) brightness(102%) contrast(92%);
+  --filter-c-6: invert(4%) sepia(9%) saturate(1049%) hue-rotate(131deg) brightness(94%) contrast(86%);
+  --filter-c-7: invert(29%) sepia(10%) saturate(493%) hue-rotate(131deg) brightness(100%) contrast(80%);
+  --filter-c-8: invert(57%) sepia(6%) saturate(182%) hue-rotate(131deg) brightness(94%) contrast(92%);
+  --filter-c-9: invert(87%) sepia(4%) saturate(34%) hue-rotate(131deg) brightness(101%) contrast(88%);
+  --filter-c-10: invert(100%);
+  --filter-c-11: invert(49%) sepia(7%) saturate(3868%) hue-rotate(73deg) brightness(91%) contrast(85%);
+  --filter-c-12: invert(17%) sepia(75%) saturate(3553%) hue-rotate(348deg) brightness(101%) contrast(82%);
+  --filter-c-13: invert(89%) sepia(45%) saturate(62%) hue-rotate(295deg) brightness(100%) contrast(104%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Nunito Sans", sans-serif;
+  --title-font-size: 1.25rem;
+  --body-font-size: 1rem;
+  --input-font-size: 1rem;
+  --button-font-size: 1rem;
+  --small-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /*========== Width Containers ==========*/
+  --max-container: 74.375rem; //1190px
+  --max-container-lg: 90rem; //1440px
+
+  /*========== Inputs ==========*/
+  --box-shadow-inputs: 0px 0px 0px 1px hsla(37, 100%, 98%, 1), 0px 0px 0px 3px hsla(33, 21%, 16%, 1);
+
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 62rem) {
+  }
+}
+
+/*** ARRAYS COLORS ***/
+$colors: var(--c-1), var(--c-2), var(--c-3), var(--c-4), var(--c-5), var(--c-6), var(--c-7), var(--c-8), var(--c-9),
+  var(--c-10), var(--c-11), var(--c-12), var(--c-13);
+
+/*========== Width Medias ==========*/
+$sm: 36rem; //576px
+$md: 48rem; //768px
+$lg: 62rem; //992px
+$xl: 75rem; //1200px
+$xxl: 87.5rem; //1400px
+
+/*** SPACES ***/
+$spaces: 4, 8, 12, 16, 24, 32, 40, 80;
+
+/*** CONFIGs ***/
+$img-path: "../../img/";
+$font-path: "../fonts/";
+
+$font-size: 16px;
+
+$version: "#{random(9999)}" !default;
+
+/*** EASES ***/
+$ease-0: all 0.3s ease-in-out;
+$ease-1: all 0.5s ease-in-out;

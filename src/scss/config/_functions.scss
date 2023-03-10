@@ -1,0 +1,26 @@
+/********** PARCE INT **********/
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+/********** REM SIZE TRANSFORM **********/
+@function rem($size) {
+  @return parseInt($size) / parseInt($font-size) * 1rem;
+}
+
+/********** PUT VERSION IN URL **********/
+@function v-url($url) {
+  $v-url: url($url + "?v=" + $version);
+
+  @return $v-url;
+}
+
+/********** SPACE **********/
+@function space($num) {
+  @return rem(nth($spaces, $num));
+}
+
+/********** COLOR **********/
+@function color($num) {
+  @return nth($colors, $num);
+}
